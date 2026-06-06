@@ -6,9 +6,7 @@
  ;; If there is more than one, they won't work right.
  '(c-ts-mode-indent-offset 8)
  '(display-line-numbers-type 'relative)
- '(package-selected-packages
-   '(company doom-modeline doom-themes go-mode lsp-mode
-	     rainbow-delimiters restart-emacs)))
+ '(package-selected-packages nil))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
