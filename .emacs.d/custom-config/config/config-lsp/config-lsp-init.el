@@ -21,5 +21,6 @@
 
 (load (expand-file-name "config-lsp-go.el" (file-name-directory load-file-name)))
 (load (expand-file-name "config-lsp-cc.el" (file-name-directory load-file-name)))
+(load (expand-file-name "config-lsp-web.el" (file-name-directory load-file-name)))
 
 (provide 'config-lsp-init)
