@@ -1,15 +1,17 @@
 ;;; -*- lexical-binding: t -*-
 
 (require 'lsp-go)
-(defun custom-go-mode-hook ()
+
+(defun custom-go-ts-mode-hook ()
   (setq-local indent-tabs-mode t)
+  (setq-local tab-width 4)
   (add-hook 'before-save-hook #'lsp-format-buffer nil t))
 
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :hook
   (go-ts-mode . lsp-deferred)
-  (go-ts-mode . custom-go-mode-hook)
+  (go-ts-mode . custom-go-ts-mode-hook)
   :mode ("\\.go\\'" . go-ts-mode)
   :init
   (setq lsp-completion-provider :capf)

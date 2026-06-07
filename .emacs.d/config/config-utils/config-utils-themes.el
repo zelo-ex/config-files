@@ -21,6 +21,12 @@
 			       (custom-set-variables '(display-line-numbers-type (quote relative)))
 			       )))))
 
+;;; TODO: change background color
+(defun custom-doom-theme-fix-background-hook ()
+  (setq foo (car-safe doom-themes--colors))
+  (setq bg-color (cons (car foo) (cons "#1e1e1e" (nthcdr 2 foo))))
+  (setq doom-themes--colors (cons bg-color (nthcdr 1 doom-themes--colors))))
+
 (use-package doom-themes
   :config
   (load-theme 'doom-one t))
