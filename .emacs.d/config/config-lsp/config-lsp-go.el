@@ -4,7 +4,6 @@
 
 (defun custom-go-ts-mode-hook ()
   (setq-local indent-tabs-mode t)
-  (setq-local tab-width 4)
   (add-hook 'before-save-hook #'lsp-format-buffer nil t))
 
 (use-package lsp-mode

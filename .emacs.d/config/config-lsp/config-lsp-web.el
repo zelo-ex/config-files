@@ -37,9 +37,9 @@
          ("\\.jsx?\\'"  . web-mode)
          ("\\.tsx?\\'"  . web-mode))
   :custom
-  (web-mode-markup-indent-offset 2)
-  (web-mode-css-indent-offset 2)
-  (web-mode-code-indent-offset 2)
+  (web-mode-markup-indent-offset 4)
+  (web-mode-css-indent-offset 4)
+  (web-mode-code-indent-offset 4)
   (web-mode-enable-auto-pairing t)
   (web-mode-enable-css-colorization t)
   :hook

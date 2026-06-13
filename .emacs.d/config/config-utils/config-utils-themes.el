@@ -5,8 +5,8 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (setq-default inhibit-splash-screen t)
+(set-face-attribute 'default nil :height 96)
 
-(require 'use-package)
 (setq use-package-always-defer nil
       use-package-always-demand t)
 

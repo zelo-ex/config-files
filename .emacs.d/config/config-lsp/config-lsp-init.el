@@ -1,5 +1,7 @@
 ;;; -*- lexical-binding: t -*-
 
+(use-package lsp-mode)
+
 (use-package company
   :config
   (setq
