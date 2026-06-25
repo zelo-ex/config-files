@@ -5,7 +5,14 @@
 (scroll-bar-mode 0)
 (column-number-mode 1)
 (setq-default inhibit-splash-screen t)
-(set-face-attribute 'default nil :height 96)
+
+(defun font-installed-p (font-name)
+  "Check if font with FONT-NAME is available."
+  (find-font (font-spec :name font-name)))
+
+(set-face-attribute 'default nil :font "JetBrains Mono-10" :height 96)
+(set-fontset-font t 'han (font-spec :family "等距更纱黑体 SC" :size 16 :height 96))
+
 
 (setq use-package-always-defer nil
       use-package-always-demand t)
