@@ -8,15 +8,19 @@
 
 (defun my-c-ts-mode-setup ()
   (setq-local c-ts-mode-indent-style 'linux)
+  (setq-local indent-tabs-mode t)
   (setq-local tab-width 8)
   (setq-local c-ts-mode-indent-offset 8)
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (lsp-deferred))
 (add-hook 'c-ts-mode-hook #'my-c-ts-mode-setup)
 
 (defun my-c++-ts-mode-setup ()
   (setq-local c++-ts-mode-indent-style 'linux)
+  (setq-local indent-tabs-mode t)
   (setq-local tab-width 8)
   (setq-local c++-ts-mode-indent-offset 8)
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (lsp-deferred))
 (add-hook 'c++-ts-mode-hook #'my-c++-ts-mode-setup)
 

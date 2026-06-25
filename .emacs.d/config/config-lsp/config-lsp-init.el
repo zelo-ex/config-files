@@ -20,6 +20,7 @@
   :hook (after-init . global-company-mode))
 
 (electric-pair-mode t)
+(setq-default electric-indent-inhibit t)
 
 (load (expand-file-name "config-lsp-go.el" (file-name-directory load-file-name)))
 (load (expand-file-name "config-lsp-cc.el" (file-name-directory load-file-name)))

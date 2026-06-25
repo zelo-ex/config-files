@@ -4,6 +4,7 @@
 
 (defun custom-go-ts-mode-hook ()
   (setq-local indent-tabs-mode t)
+  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (add-hook 'before-save-hook #'lsp-format-buffer nil t))
 
 (use-package lsp-mode
