@@ -10,8 +10,8 @@
   "Check if font with FONT-NAME is available."
   (find-font (font-spec :name font-name)))
 
-(set-face-attribute 'default nil :font "JetBrains Mono-10" :height 96)
-(set-fontset-font t 'han (font-spec :family "等距更纱黑体 SC" :size 16 :height 96))
+(set-face-attribute 'default nil :font "JetBrains Mono-12" :height 128)
+(set-fontset-font t 'han (font-spec :family "等距更纱黑体 SC" :size 20 :height 128))
 
 
 (setq use-package-always-defer nil
