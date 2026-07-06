@@ -7,11 +7,28 @@
   :config
   (setq restart-emacs-restore-frames t))
 
-(defun delete-line-no-kill ()
+(defun foreward-delete-line-no-kill ()
   (interactive)
   (delete-region (line-beginning-position) (save-excursion (move-end-of-line 1) (point)))
   (delete-char 1))
-(global-set-key (kbd "C-k") 'delete-line-no-kill)
+(global-set-key (kbd "M-k") 'foreward-delete-line-no-kill)
+
+(defun backward-delete-line-no-kill ()
+  (interactive)
+  (let ((prev-end (save-excursion
+                    (unless (bobp)
+                      (forward-line -1)
+                      (end-of-line)
+                      (point)))))
+    (delete-region (line-beginning-position)
+                   (save-excursion (move-end-of-line 1) (point)))
+    (unless (eobp)
+      (delete-char 1))
+    (if prev-end
+        (goto-char prev-end) 
+      (progn
+        (message "Beginning of Buffer.")))))
+(global-set-key (kbd "C-k") 'backward-delete-line-no-kill)
 
 (defun custom-split-window-and-scratch (window-direction)
   (let ((split-func (if (eq window-direction 'right)
