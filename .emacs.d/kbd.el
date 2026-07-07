@@ -30,6 +30,13 @@
         (message "Beginning of Buffer.")))))
 (global-set-key (kbd "C-k") 'backward-delete-line-no-kill)
 
+(defun custom-mark-comment ()
+  (interactive)
+  (let ((beg (line-beginning-position))
+        (end (line-end-position)))
+    (comment-or-uncomment-region beg end)))
+(global-set-key (kbd "C-c C-c") 'custom-mark-comment)
+
 (defun custom-split-window-and-scratch (window-direction)
   (let ((split-func (if (eq window-direction 'right)
                         #'split-window-right
