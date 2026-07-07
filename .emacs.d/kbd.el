@@ -35,7 +35,7 @@
   (let ((beg (line-beginning-position))
         (end (line-end-position)))
     (comment-or-uncomment-region beg end)))
-(global-set-key (kbd "C-c C-c") 'custom-mark-comment)
+(global-set-key (kbd "C-M-;") 'custom-mark-comment)
 
 (defun custom-split-window-and-scratch (window-direction)
   (let ((split-func (if (eq window-direction 'right)
