@@ -12,7 +12,7 @@
 (use-package org-modern
   :hook (org-mode . org-modern-mode)
   :config
-  (setq org-modern-star 'replace)
+  (setq org-modern-star 'nil)
   (setq org-modern-todo t)
   (setq org-modern-table t))
 
