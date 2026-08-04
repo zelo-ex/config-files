@@ -1,4 +1,5 @@
 ;;; -*- lexical-binding: t -*-
+(setq-default inhibit-splash-screen t)
 (package-initialize)
 (setq make-backup-files nil)
 

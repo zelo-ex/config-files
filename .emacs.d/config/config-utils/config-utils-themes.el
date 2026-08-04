@@ -4,7 +4,6 @@
 (tool-bar-mode 0)
 (scroll-bar-mode 0)
 (column-number-mode 1)
-(setq-default inhibit-splash-screen t)
 
 (defun font-installed-p (font-name)
   "Check if font with FONT-NAME is available."
