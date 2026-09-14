@@ -1,12 +1,12 @@
 ;;; -*- lexical-binding: t -*-
 (setq-default inhibit-splash-screen t)
-(package-initialize)
 (setq make-backup-files nil)
 
 (setq package-enable-at-startup nil)
 (setq package-archives '(("gnu"    . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
                          ("melpa"  . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
+(package-initialize)
 
 (unless (require 'use-package nil t)
   (progn

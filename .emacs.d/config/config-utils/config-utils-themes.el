@@ -20,7 +20,7 @@
 
 (use-package emacs
   :config
-  ;; (add-to-list 'default-frame-alist '(fullscreen . fullboth))
+  (add-to-list 'default-frame-alist '(fullscreen . fullboth))
   (defalias 'yes-or-no-p 'y-or-n-p)
   (dolist (mode '(text-mode-hook prog-mode-hook conf-mode-hook))
     (add-hook mode (
@@ -29,7 +29,6 @@
 			       (custom-set-variables '(display-line-numbers-type (quote relative)))
 			       )))))
 
-;;; TODO: change background color
 (defun custom-doom-theme-fix-background-hook ()
   (setq foo (car-safe doom-themes--colors))
   (setq bg-color (cons (car foo) (cons "#1e1e1e" (nthcdr 2 foo))))

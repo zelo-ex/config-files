@@ -6,11 +6,10 @@
  ;; If there is more than one, they won't work right.
  '(display-line-numbers-type 'relative)
  '(package-selected-packages
-   '(aidermacs claude-code company doom-modeline doom-themes emmet-mode
-	       exec-path-from-shell lsp-pyright lsp-python-ms magit
-	       org-modern pi-coding-agent python-mode
-	       rainbow-delimiters restart-emacs web-mode
-	       yasnippet-capf)))
+   '(cl-lib company doom-modeline doom-themes emmet-mode lsp-java
+	    lsp-pyright org-modern pi-coding-agent racket-mode
+	    rainbow-delimiters restart-emacs web-mode which-key
+	    yasnippet-capf)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

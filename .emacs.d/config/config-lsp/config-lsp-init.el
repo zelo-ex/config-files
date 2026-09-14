@@ -22,9 +22,14 @@
 (electric-pair-mode t)
 (setq-default electric-indent-inhibit t)
 
+(require 'yasnippet)
+(yas-global-mode 1)
+
 (load (expand-file-name "config-lsp-go.el" (file-name-directory load-file-name)))
 (load (expand-file-name "config-lsp-cc.el" (file-name-directory load-file-name)))
-(load (expand-file-name "config-lsp-web.el" (file-name-directory load-file-name))
-(load (expand-file-name "config-lsp-python.el" (file-name-directory load-file-name))))
+(load (expand-file-name "config-lsp-web.el" (file-name-directory load-file-name)))
+(load (expand-file-name "config-lsp-python.el" (file-name-directory load-file-name)))
+(load (expand-file-name "config-lsp-racket.el" (file-name-directory load-file-name)))
+(load (expand-file-name "config-lsp-java.el" (file-name-directory load-file-name)))
 
 (provide 'config-lsp-init)
