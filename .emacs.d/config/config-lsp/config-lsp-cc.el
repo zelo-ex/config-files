@@ -1,6 +1,8 @@
 ;;; -*- lexical-binding: t -*-
 
-(add-to-list 'auto-mode-alist '("\\.[hc]\\(pp\\)?\\'" . c-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(cpp\\|cc\\|cxx\\)\\'" . c++-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.\\(hpp\\|hh\\)\\'" . c++-ts-mode))
+(add-to-list 'auto-mode-alist '("\\.[ch]\\'" . c-ts-mode))
 
 (with-eval-after-load 'lsp-mode
   (add-to-list 'lsp-language-id-configuration '(c-ts-mode . "c"))
@@ -8,27 +10,27 @@
 
 (defun my-c-ts-mode-setup ()
   (setq-local c-ts-mode-indent-style 'linux)
-  (setq-local indent-tabs-mode t)
+  (setq-local indent-tabs-mode nil)
   ;; (setq-local tab-width 8)
   ;; (setq-local c-ts-mode-indent-offset 8)
   (setq-local tab-width 4)
   (setq-local c-ts-mode-indent-offset 4)
   ;; (setq-local tab-width 2)
   ;; (setq-local c-ts-mode-indent-offset 2)
-  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+  ;; (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (lsp-deferred))
 (add-hook 'c-ts-mode-hook #'my-c-ts-mode-setup)
 
 (defun my-c++-ts-mode-setup ()
-  (setq-local c++-ts-mode-indent-style 'linux)
-  (setq-local indent-tabs-mode t)
+  (setq-local c-ts-mode-indent-style 'linux)
+  (setq-local indent-tabs-mode nil)
   ;; (setq-local tab-width 8)
-  ;; (setq-local c++-ts-mode-indent-offset 8)
+  ;; (setq-local c-ts-mode-indent-offset 8)
   (setq-local tab-width 4)
-  (setq-local c++-ts-mode-indent-offset 4)
+  (setq-local c-ts-mode-indent-offset 4)
   ;; (setq-local tab-width 2)
-  ;; (setq-local c++-ts-mode-indent-offset 2)
-  (local-set-key (kbd "TAB") 'tab-to-tab-stop)
+  ;; (setq-local c-ts-mode-indent-offset 2)
+  ;; (local-set-key (kbd "TAB") 'tab-to-tab-stop)
   (lsp-deferred))
 (add-hook 'c++-ts-mode-hook #'my-c++-ts-mode-setup)
 

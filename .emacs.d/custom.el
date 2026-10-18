@@ -7,9 +7,12 @@
  '(display-line-numbers-type 'relative)
  '(package-selected-packages
    '(cl-lib company doom-modeline doom-themes emmet-mode lsp-java
-	    lsp-pyright org-modern pi-coding-agent racket-mode
-	    rainbow-delimiters restart-emacs web-mode which-key
-	    yasnippet-capf)))
+	    lsp-pyright org org-mode org-modern pi-coding-agent
+	    racket-mode rainbow-delimiters restart-emacs valign
+	    web-mode which-key yasnippet-capf))
+ '(package-vc-selected-packages
+   '((org-mode :url "https://code.tecosaur.net/tec/org-mode" :branch
+	       "dev"))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

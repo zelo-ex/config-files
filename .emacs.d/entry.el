@@ -2,11 +2,9 @@
 (setq-default inhibit-splash-screen t)
 (setq make-backup-files nil)
 
-(setq package-enable-at-startup nil)
 (setq package-archives '(("gnu"    . "https://mirrors.tuna.tsinghua.edu.cn/elpa/gnu/")
                          ("nongnu" . "https://mirrors.tuna.tsinghua.edu.cn/elpa/nongnu/")
                          ("melpa"  . "https://mirrors.tuna.tsinghua.edu.cn/elpa/melpa/")))
-(package-initialize)
 
 (unless (require 'use-package nil t)
   (progn
@@ -20,6 +18,8 @@
       use-package-always-demand nil
       use-package-expand-minimally t
       use-package-verbose nil)
+
+(use-package org :load-path "~/.emacs.d/org-mode/lisp/")
 
 (let ((config-root
        (file-name-directory load-file-name)))
